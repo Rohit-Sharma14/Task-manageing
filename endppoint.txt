@@ -1,0 +1,36 @@
+AUTH.JS
+/signup-
+to create user and store name,email and password
+/signin-
+to authenticate user using JWT token, saving token to local storage
+MIDDLEWARE
+/requirelogin-
+middleware to verify user at every route
+DASHBOARD.JS
+/create board-
+create a board in application to list tasks.
+/myboards-
+to fetch all the board created by user 
+/uploadpic-
+to store user pics URL
+BOARD.JS
+/board/:id-
+to gether a board's details
+/search-user-
+to fetch user email from database
+/add/:id/:boardid-
+to add members in board and storing the id of user in board schema and id of board in user's schema
+/createcard/:id-
+to create a new card
+/todocard/:id-
+to fetch cards of todo list
+/indevcard/:id-
+to fetch cards of in development list 
+/torev/:id-
+to fetch card for review list
+/finished/:id-
+to fetch card of finished list
+/comment/:id-
+to fetch comment posted on cards
+/card/:id-
+to fetch a card

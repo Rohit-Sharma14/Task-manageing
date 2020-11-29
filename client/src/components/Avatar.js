@@ -110,7 +110,7 @@ const Avatar = (props) => {
                 </div>
 
 
-                {/* 
+
                 <Modal show={show} onHide={handleClose} animation={false}>
                     <Modal.Header closeButton>
                         <Modal.Title>Modal heading</Modal.Title>
@@ -148,7 +148,7 @@ const Avatar = (props) => {
                     </Button>
 
                     </Modal.Footer>
-                </Modal> */}
+                </Modal>
             </div>
 
         </div>

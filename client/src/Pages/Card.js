@@ -16,7 +16,6 @@ const Card = () => {
             method: 'get',
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": "Bearer " + localStorage.getItem("jwt")
             },
         }).then(res => res.json())
             .then(result => {
@@ -25,7 +24,7 @@ const Card = () => {
             }).catch(err => {
                 console.log(err)
             })
-    }, [data])
+    }, [])
 
 
     const makecomment = (text) => {
@@ -51,7 +50,7 @@ const Card = () => {
 
     const updatestatus = () => {
         console.log(status, id)
-        fetch(`/status`, {
+        fetch(`/status/${id}`, {
             method: 'post',
             headers: {
                 "Content-Type": "application/json",

@@ -7,8 +7,8 @@ const NavBar = () => {
     const renderList = () => {
         if (state) {
             return [
-                
-                <li key="3"> <button className="btn waves-effectwaves-light #9575cd red lighten-1" style={{paddingRight:'20px'}}
+
+                <li key="3"> <button className="btn waves-effectwaves-light #9575cd red lighten-1" style={{ paddingRight: '20px' }}
                     onClick={() => {
                         localStorage.clear()
                         dispatch({ type: "CLEAR" })
@@ -26,7 +26,7 @@ const NavBar = () => {
     return (
         <nav>
             <div className="nav-wrapper #9575cd deep-purple lighten-1 ">
-                <Link to={state ? "/" : "/signin"} className="brand-logo left ">Trello</Link>
+                <Link to={state ? "/dashboard" : "/signin"} className="brand-logo left ">Trello</Link>
                 <ul id="nav-mobile" className="right">
                     {renderList()}
                 </ul>

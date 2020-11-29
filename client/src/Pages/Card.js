@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { Jumbotron } from 'react-bootstrap'
 import { useParams } from 'react-router-dom'
 import Loader from 'react-loader-spinner'
+import M from 'materialize-css'
 
 const Card = () => {
     const { id } = useParams()
@@ -62,6 +63,7 @@ const Card = () => {
         }).then(res => res.json())
             .then(result => {
                 console.log(result)
+                M.toast({ html: 'Status updated', classes: "#43a047 green darken-1" })
             })
     }
 

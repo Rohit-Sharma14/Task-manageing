@@ -15,4 +15,3 @@
    ![4](https://user-images.githubusercontent.com/65606941/100515884-7bb8b700-31a5-11eb-88d3-abd768208701.png)
    
     In this screenshot I have illustrated the title and description of the task. User can discuss their progress and can update the status of task by clicking on task button.
-(P.S.  Task button function is in development)

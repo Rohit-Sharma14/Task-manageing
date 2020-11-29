@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { Jumbotron } from 'react-bootstrap'
 import { useParams } from 'react-router-dom'
 import Loader from 'react-loader-spinner'
+
 const Card = () => {
     const { id } = useParams()
     console.log(id)
@@ -145,6 +146,7 @@ const Card = () => {
     return (
         <div>
             { render()}
+
         </div>
 
     )

@@ -21,7 +21,7 @@ const CreateBoard = () => {
                     M.Toast({ html: data.error, classes: "#c62828 red darken-3" })
                 } else {
                     M.toast({ html: "Board created successfully", classes: "#43a047 green darken-1" })
-                    history.push('/')
+                    history.push('/dashboard')
                 }
             }).catch(err => {
                 console.log(err)

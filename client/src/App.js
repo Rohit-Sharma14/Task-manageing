@@ -1,7 +1,7 @@
 import 'react-app-polyfill/ie11'
 import React, { useEffect, createContext, useContext, useReducer } from 'react'
 import NavBar from './components/NavBar'
-import { BrowserRouter, Route, Switch, useHistory } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, useHistory } from 'react-router-dom'
 import Dashboard from './Pages/Dashboard'
 import Signin from './Pages/Signin'
 import Signup from './Pages/Signup'
@@ -20,28 +20,18 @@ const Routing = () => {
     const user = JSON.parse(localStorage.getItem("user"))
     if (user) {
       dispatch({ type: "USER", payload: user })
-      history.push('/dashboard')
+      // history.push('/dashboard')
     } else {
       history.push('/signin')
     }
   }, [])
   return (
     <Switch>
-      <Route exact path="/dashboard" >
-        <Dashboard />
-      </Route>
-      <Route path="/signin" >
-        <Signin />
-      </Route>
-      <Route path="/signup" >
-        <Signup />
-      </Route>
-      <Route path="/board/:id" >
-        <Board />
-      </Route>
-      <Route path="/card/:boardid/:id" >
-        <Card />
-      </Route>
+      <Route exact path="/dashboard" component={Dashboard} />
+      <Route exact path="/signin" component={Signin} />
+      <Route exact path="/signup" component={Signup} />
+      <Route exact path="/board/:id" component={Board} />
+      <Route exact path="/card/:boardid/:id" component={Card} />
     </Switch>
   )
 }
@@ -50,10 +40,10 @@ function App() {
   const [state, dispatch] = useReducer(reducer, initialstate)
   return (
     <UserContext.Provider value={{ state, dispatch }}>
-      <BrowserRouter>
+      <Router>
         <NavBar />
         <Routing />
-      </BrowserRouter>
+      </Router>
     </UserContext.Provider>
 
 

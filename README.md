@@ -1,4 +1,4 @@
-# greendeck-project
+# Trello Clone
 
 ## About project
     It's a trello application clone created using MERN STACK in which I have used JWT tokens to authenticate user and to create an interactive UI using react bootstrap and materialized CSS. For backend I have used NODE.JS and EXPRESS. For database I have used MONGODB using mongoose and hosted database on MONGODB atlas. 

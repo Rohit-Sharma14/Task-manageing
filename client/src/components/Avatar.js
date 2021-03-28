@@ -3,9 +3,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import Avatarr from '@material-ui/core/Avatar';
 import { Modal, Button } from 'react-bootstrap'
 import { useEffect } from 'react';
+import { history, useHistory } from 'react-router-dom'
+import M from 'materialize-css'
 
 const Avatar = (props) => {
-
+    const history = useHistory()
     const [show, setShow] = useState(false);
     const [userdet, setUserdet] = useState([])
     const handleClose = () => setShow(false);
@@ -53,7 +55,7 @@ const Avatar = (props) => {
                 console.log(result.members)
                 setImg(result.members)
                 console.log(img)
-
+                M.toast({ html: "User added successfully", classes: "#43a047 green darken-1" })
 
             })
 
@@ -132,7 +134,7 @@ const Avatar = (props) => {
                                             {item.email}
                                         </div>
                                         <div>
-                                            <Button onClick={() => adduser(item._id)} >Add</Button>
+                                            <Button onClick={() => adduser(item._id)} onClick={handleClose} >Add</Button>
                                         </div>
                                     </div>
                                 </li>
